@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log("시작");
+
+        // setTimeout(function () {
+        //     console.log("중간");
+        // }, 5000);
+
+        // console.log("끝");
+
+        // function callback() {
+        //     console.log("콜백 함수군요!");
+        // }
+        // function print(callback) {
+        //     callback();
+        // }
+        // print(callback);
+
+        // setTimeout(() => {
+        //     console.log("1번 실행!");
+        // }, 5000);
+
+        // console.log("2번 실행!");
+
+        // 콜백 함수
+        // function print(result) {
+        //     console.log(result);
+        // }
+        // function add(n1, n2, print) {
+        //     print(n1+n2);
+        // }
+        // add(10,20, print);
+
+        // function add(x, y, print) {
+        //     console.log(print);
+        //     print(x + y)
+        // }
+
+        // add(10, 20, (result) => {
+        //     console.log(result)
+        // })
+
+        // Hello
+        // 1초 기다려
+        // function print(callback) {
+        //     setTimeout(callback, 1000);
+        //     console.log("1초 기다려~");
+        // }
+        // print(() => {
+        //     console.log("Hello");
+        // })
+
+        // 문제
+        // 못 들었어면 다시 들려줄게
+        // 잘 들었어 그럼 감상평은?
+        // 그럼 감상평은? 이면 훌륭한 연주였어 브라보~
+        function study(time) {
+            if ( time === 1) {
+                setTimeout(() => {
+                    console.log(time+"시간만큼 공부한거야?");
+                }, 1000);
+            } else if ( time === 3) {
+                setTimeout(() => {
+                    console.log(time+"시간만큼 공부한거야?");
+                }, 3000);
+            } else if ( time === 5) {
+                setTimeout(() => {
+                    console.log(time+"시간만큼 공부한거야?");
+                }, 5000);
+            } else if ( time === 10) {
+                setTimeout(() => {
+                    console.log(time+"시간만큼 공부한거야?\n");
+                    console.log("대단하네~");
+                }, 10000);
+            }
+        }
+        study(5);
+        study(10);
+        study(3);
+        study(1);
+
+    </script>
+</body>
+</html>

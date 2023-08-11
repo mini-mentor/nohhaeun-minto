@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let myFirstPromise = new Promise((resolve, reject) => {
+        //     // 우리가 수행한 비동기 작업이 성공한 경우 resolve(...)를 호출하고, 실패한 경우 reject(...)를 호출합니다.
+        //     // 이 예제에서는 setTimeout()을 사용해 비동기 코드를 흉내냅니다.
+        //     // 실제로는 여기서 XHR이나 HTML5 API를 사용할 것입니다.
+        //     setTimeout(function () {
+        //         resolve("성공!")  // 와! 문제 없음!
+        //     }, 250)
+        // })
+
+        // myFirstPromise.then((successMessage) => {
+        //     // successMessage는 위에서 resolve(...) 호출에 제공한 값입니다.
+        //     // 문자열이어야 하는 법은 없지만, 위에서 문자열을 줬으니 아마 문자열일 것입니다.
+        //     console.log("와! " + successMessage)
+        // });
+
+        // const promise1 = new Promise((resolve, reject) => {
+        //     resolve();
+        // });
+
+        // promise1
+        //     .then(() => {
+        //         console.log("then!");
+        //     })
+        //     .catch(() => {
+        //         console.log("catch!");
+        //     });
+
+        // function startAsync(age) {
+        //     return new Promise((resolve, reject) => {
+        //         if (age > 20) resolve();
+        //         else reject();
+        //     });
+        // }
+
+        // const promise1 = startAsync(25);
+        // promise1
+        //     .then(() => {
+        //         console.log("1 then!");
+        //     })
+        //     .catch(() => {
+        //         console.log("1 catch!");
+        //     });
+
+        // const promise2 = startAsync(15);
+        // promise2
+        //     .then(() => {
+        //         console.log("2 then!");
+        //     })
+        //     .catch(() => {
+        //         console.log("2 catch!");
+        //     });
+
+        // function setTimeoutPromise(delay) {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve();
+        //         }, delay);
+        //     });
+        // }
+
+        // console.log("setTimeoutPromise가 시작됩니다.");
+
+        // const promise = setTimeoutPromise(1000);
+
+        // promise.then(() => {
+        //     console.log("끝났습니다!");
+        // });
+
+        // const getDataCallback = (str, callback) => {
+        //     setTimeout(() => {
+        //         if (typeof str === 'string') {
+        //             callback(undefined, str) //error, result
+        //         } else {
+        //             callback('문자열이 아니네요')
+        //         }
+        //     }, 2000)
+        // }
+
+        // getDataCallback(2, (err, data) => {
+        //     if (err) {
+        //         console.log(err)
+        //     } else {
+        //         getDataCallback(data, (err, data) => { //두 번 2를 곱하고 싶어서 콜백함수 다시 호출함
+        //             if (err) {
+        //                 console.log(err)
+        //             } else {
+        //                 console.log(data) //8, 두번째로 2를 곱했으므로 8
+        //             }
+        //         })
+        //     }
+        // })
+
+        // getDataCallback("하이하이", (err, data) => {
+        //     if (err) {
+        //         console.log(err)
+        //     } else {
+        //         getDataCallback(data, (err, data) => { //두 번 2를 곱하고 싶어서 콜백함수 다시 호출함
+        //             if (err) {
+        //                 console.log(err)
+        //             } else {
+        //                 console.log(data) //8, 두번째로 2를 곱했으므로 8
+        //             }
+        //         }
+        //             // console.log(data)
+        //         )
+        //     }
+        // })
+
+        // getDataPromise('하하이').then((data) => {
+        //     return getDataPromise(data)
+        // }).then((data) => {
+        //     return getDataPromise(data)
+        // }).then((data) => {
+        //     console.log(data)
+        // }).catch((err) => { //catch: an error handler for all of our promises in the promise chaining
+        //     console.log(err)
+        // })
+
+        // 기존
+        // function startAsync(age) {
+        //   return new Promise((resolve, reject) => {
+        //     if (age > 20) resolve(`${age} success`);
+        //     else reject(new Error(`${age} is not over 20`));
+        //   });
+        // }
+
+        // async function f() {
+
+        //     let promise = new Promise((resolve, reject) => {
+        //         setTimeout(() => resolve("완료!"), 1000)
+        //     });
+
+        //     let result = await promise; // 프라미스가 이행될 때까지 기다림 (*)
+
+        //     console.log(result); // "완료!"
+        // }
+
+        // f();
+
+        // async & await 예제
+
+        // function delay(ms) {
+        //     return new Promise(resolve => setTimeout(resolve, ms));
+        // }
+
+        // //2초동안 기다리게 하고 사과를 리턴하는 메서드
+        // async function getApple() {
+        //     await delay(2000)
+        //     return '🍎'
+        // }
+
+        // //1초동안 기다라게 하고 사과를 리턴하는 메서드
+        // async function getBanana() {
+        //     await delay(1000)
+        //     return '🍌'
+        // }
+
+        // getApple().then(console.log)  // 결과 : 🍎
+        // getBanana().then(console.log) // 결과 : 🍌
+
+        // function order(ms) {
+        //     return new Promise(resolve => setTimeout(resolve, ms));
+        // }
+
+        // //2초동안 기다리게 하고 사과를 리턴하는 메서드
+        // async function selectMenu() {
+        //     await order(2000)
+        //     return `${ms}초 기다렸군요ㅛ`
+        // }
+
+        // //1초동안 기다라게 하고 사과를 리턴하는 메서드
+        // async function getBanana() {
+        //     await order(1000)
+        //     return '🍌'
+        // }
+
+        // selectMenu().then(console.log)  // 결과 : 🍎
+        // getBanana().then(console.log) // 결과 : 🍌
+
+        
+        async function order() {
+
+            async function fLoading() {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        console.log("고민중..");
+                    }, 2000);
+                });
+            }
+            async function fOrder() {
+                return setTimeout(() => {
+                    console.log("주문했다!");
+                }, 3000);
+            }
+    
+            async function fTakeout() {
+                return setTimeout(() => {
+                    console.log("받았당!");
+                }, 1000);
+            }
+    
+            async function fEat() {
+                return setTimeout(() => {
+                    console.log("먹자먹자");
+                }, 200);
+            }
+
+            let loading = await fLoading()
+            let order = await fOrder()
+            let takeout = await fTakeout()
+            let eat = await fEat()
+        }
+
+        order();
+
+        // async function f() {
+
+        //     let promise = new Promise((resolve, reject) => {
+        //         setTimeout(() => resolve("완료!"), 1000)
+        //     });
+
+        //     let result = await promise; // 프라미스가 이행될 때까지 기다림 (*)
+
+        //     console.log(result); // "완료!"
+        // }
+
+        // f();
+    </script>
+</body>
+
+</html>

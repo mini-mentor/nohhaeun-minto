@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/join.css">
+</head>
+<body>
+    <div class="container">
+        <p id="title">
+            문자인증 1번만 하면<br>
+            가입이 완료돼요!
+        </p>
+        <div class="join">
+            <input type="text" id="name" placeholder="이미니" autofocus>
+            <input type="tel" id="tel" placeholder="010-0000-0000">
+            <input type="button" value="인증 받기" id="cert-btn">
+            <div class="input-num">
+                <input type="number" id="cert-num" placeholder="000000">
+                <p id="timer">2:32</p>
+            </div>
+            <div class="radio-gender">
+                <input type="radio" value="woman" id="woman" name="gender"><label for="woman">여자</label>    
+                <input type="radio" value="man" id="man" name="gender"><label for="man">남자</label> 
+            </div>
+        </div>
+        <button id="next-btn">다음</button>
+</body>
+</html>

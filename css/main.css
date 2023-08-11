@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Pretendard-Regular';
+}
+
+.container {
+    position: absolute;
+    top: 8vh;
+    left: 6vw;
+    width: 88vw;
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 10vh;
+    /* background-color: aquamarine; */
+}
+
+.container .search input[type=text] {
+    position: absolute;
+    width: 83.5vw;
+    height: 6.5vh;
+    border-radius: 1.5em;
+    padding-left: 1.3em;
+    font-size: 1.1em;
+    color: rgb(159, 159, 159);
+    background-color: rgba(242, 242, 242, 0.89);
+    border: none;
+}
+
+.container .search img {
+    position: absolute;
+    left: 77vw;
+    top: 2vh;
+}
+
+.apply .mentee {
+    position: absolute;
+    top: 11vh;
+    width: 42vw;
+    height: 26vh;
+    border-radius: 1.5em;
+    background-color: rgb(0, 210, 189);
+    border: none;
+}
+
+.apply .mentee p {
+    position: absolute;
+    left: 0.8em;
+    top: 1em;
+    color: white;
+    font-weight: 800;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.apply .mentee img {
+    position: absolute;
+    top: 9.5vh;
+    left: 7vw;
+    width: 39vw;
+    height: 19vh;
+}
+
+.apply .mentor {
+    position: absolute;
+    top: 11vh;
+    left: 46vw;
+    width: 42vw;
+    height: 26vh;
+    border-radius: 1.5em;
+    background-color: rgb(252, 184, 9);
+    border: none;
+}
+
+.apply .mentor p {
+    position: absolute;
+    left: 0.8em;
+    top: 1em;
+    color: white;
+    font-weight: 800;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.apply .mentor img {
+    position: absolute;
+    top: 11.4vh;
+    left: 7vw;
+    width: 41vw;
+    height: 18vh;
+}
+/* 
+.contents {
+    height: auto;
+    min-height: 100%;
+} */
+
+.contents .content1 {
+    position: absolute;
+    top: 48vh;
+    width: 88vw;
+    height: 18vh;
+    border-radius: 1.5em;
+    background-color: rgba(217, 217, 217, 0);
+}
+
+.content1 .title {
+    position: absolute;
+    top: -6vh;
+    width: 88vw;
+    font-size: 1.5em;
+    font-weight: 800;
+    /* background-color: aqua; */
+}
+
+.content1 button .content {
+    z-index: 1;
+    position: absolute;
+    top: 0vh;
+    /* left: 1vw; */
+    width: 88vw;
+    height: 18vh;
+    font-size: 1.5em;
+    font-weight: 800;
+    /* background: linear-gradient( 300deg, rgb(245,245,245),rgb(0, 210, 189)); */
+    background: rgb(0, 210, 189);
+    border-radius: 1.5em;
+    border: none;
+}
+
+.content1 button .content p {
+    text-align: left;
+}
+.content1 button .content p#calendar-title {
+    position: absolute;
+    top: 3vh;
+    left: 5vw;
+    font-size: 1em;
+    color: white;
+}
+.content1 button .content p#calendar-subtitle {
+    position: absolute;
+    top: 10.5vh;
+    left: 5vw;
+    font-size: 0.8em;
+}
+
+.contents .content2 {
+    position: absolute;
+    top: 75vh;
+    width: 88vw;
+    height: 20vh;
+    border-radius: 1.5em;
+    background-color: rgba(217, 217, 217, 0);
+}
+
+.content2 .title{
+    position: absolute;
+    top: -6vh;
+    width: 88vw;
+    font-size: 1.5em;
+    font-weight: 800;
+    /* background-color: aqua; */
+}
+
+.content2 button .content {
+    z-index: 1;
+    position: absolute;
+    top: 0vh;
+    width: 88vw;
+    height: 18vh;
+    font-size: 1.5em;
+    font-weight: 800;
+    /* background: linear-gradient( 300deg, rgb(245,245,245),rgb(252, 184, 9)); */
+    background: rgb(252, 184, 9);
+    border-radius: 1.5em;
+    border: none;
+    /* color: white; */
+}
+
+.content2 button .content p {
+    text-align: left;
+}
+.content2 button .content p#history-title {
+    position: absolute;
+    top: 3vh;
+    left: 5vw;
+    font-size: 1em;
+    /* font-weight: 800; */
+    color: white;
+}
+.content2 button .content p#history-subtitle {
+    position: absolute;
+    top: 10.5vh;
+    left: 5vw;
+    font-size: 0.8em;
+}
+
+footer{
+    z-index: 100;
+    position : fixed;
+    /* transform : translateY(-100%); */
+    background-color:rgb(255, 255, 255);
+    width: 100vw;
+    height: 10vh;
+    bottom: 0;
+}
+
+/* footer */
+footer button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+/* 홈 버튼 */
+footer button .home-btn {
+    position: absolute;
+    left: 10vw;
+}
+
+footer button .home-btn img {
+    position: absolute;
+    top: 1vh;
+    width: 7vw;
+    height: 3.5vh;
+}
+
+footer button .home-btn p {
+    position: absolute;
+    top: 5vh;
+    left: 2.4vw;
+    color: rgb(0, 210, 189);
+    font-size: 0.5em;
+}
+
+/* 일정 버튼 */
+footer button .calendar-btn {
+    position: absolute;
+    left: 32vw;
+}
+
+footer button .calendar-btn img {
+    position: absolute;
+    top: 1vh;
+    width: 7vw;
+    height: 3.5vh;
+}
+
+footer button .calendar-btn p {
+    position: absolute;
+    top: 5vh;
+    left: 0.4vw;
+    width: 6vw;
+    /* height: 3.5vh; */
+    color: rgb(194, 194, 194);
+    font-size: 0.5em;
+}
+
+/* 히스토리 버튼 */
+footer button .history-btn {
+    position: absolute;
+    left: 56vw;
+}
+
+footer button .history-btn img {
+    position: absolute;
+    top: 1.3vh;
+    width: 7.5vw;
+    height: 3vh;
+}
+
+footer button .history-btn p {
+    position: absolute;
+    top: 5vh;
+    left: -1vw;
+    width: 10vw;
+    color: rgb(194, 194, 194);
+    font-size: 0.5em;
+    /* text-align: center; */
+}
+
+/* 마이페이지 버튼 */
+footer button .mypage-btn {
+    position: absolute;
+    left: 80vw;
+}
+
+footer button .mypage-btn img {
+    position: absolute;
+    top: 1vh;
+    width: 7vw;
+    height: 3.5vh;
+}
+
+footer button .mypage-btn p {
+    position: absolute;
+    top: 5vh;
+    left: -3.5vw;
+    width: 15vw;
+    color: rgb(194, 194, 194);
+    font-size: 0.5em;
+}
+
+input:focus {
+    outline-color: #00D2BD;
+}
