@@ -87,7 +87,7 @@ select {
 select {
     width: 84vw;
     border: none;
-    border: var(--light-border) solid var(--main-color);
+    border: var(--light-border) solid var(--gray-color);
 }
 
 /* 지원 분야 */
