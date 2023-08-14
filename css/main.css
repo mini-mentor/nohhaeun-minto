@@ -40,6 +40,12 @@
     top: 2vh;
 }
 
+ion-icon {
+    position: absolute;
+    left: 77vw;
+    top: 2vh;
+}
+
 .apply .mentee {
     position: absolute;
     top: 11vh;

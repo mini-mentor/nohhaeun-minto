@@ -2,26 +2,30 @@
 
 @media (max-height: 844px) {}
 
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+header {
+    position: absolute;
+    /* left: 7vw; */
+    top: -5vw;
+    width: 100vw;
+    height: 28vh;
+    background-color: var(--main-color);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Pretendard-Regular';
-
+main {
+    position: absolute;
+    /* left: 7vw; */
+    top: 31vw;
+    /* width: 86vw; */
+    height: 90vh;
+    background-color: var(--white-color);
 }
 
 .container {
     position: absolute;
     left: 7vw;
-    top: 10vw;
+    /* top: -15vw; */
     width: 86vw;
-    height: 80vh;
+    height: 90vh;
 }
 
 .container #title {
@@ -29,6 +33,7 @@
     top: 1vh;
     font-size: 1.8em;
     font-weight: 900;
+    color: var(--white-color);
 }
 
 .container #sub-title {
@@ -36,91 +41,93 @@
     top: 12vh;
     font-size: 1em;
     font-weight: 500;
+    color: var(--white-color);
 }
 
 .container hr {
     /* position: absolute;    */
     position: relative;
     top: 19vh;
-    border: 0.1em solid rgb(212, 214, 218);
+    border: var(--light-border) solid var(--gray-color);
 }
 
 /* 개인정보 */
 .container .apply .per-info {
     position: absolute;
     /* position: relative; */
-    top: 24vh;
+    top: 5vh;
 }
 
 .head {
-    font-size: 1.2em;
-    font-weight: 700;
-}
-
-.sub-head {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 200;
+
 }
 
 input[type="text"],
-input[type="tel"] {
-    /* margin-top: 1em; */
-    margin-left: 1em;
+input[type="tel"],
+select {
+    margin-top: 0.3em;
+    margin-bottom: 1.3em;
+    /* margin-left: 1em; */
     padding-left: 1em;
-    width: 60vw;
-    height: 5vh;
-    border: 0.1em solid rgb(212, 214, 218);
+    width: 80vw;
+    height: 4vh;
+    border: var(--light-border) solid var(--gray-color);
     border-radius: 0.3em;
 }
 
 .content {
     position: relative;
     width: 86vw;
-    left: 1vw;
-    top: 2.5vh;
+    /* left: 1vw; */
+    top: 2vh;
+}
+
+select {
+    width: 84vw;
+    border: none;
+    border: var(--light-border) solid var(--main-color);
 }
 
 /* 지원 분야 */
-.support-areas {
+/* .support-areas {
     position: absolute;
-    top: 46vh;
+    top: 35vh;
 }
 
 input[type="radio"] {
     font-size: 1.2em;
-    margin-left: 0.7em;
     margin-right: 1em;
-    margin-top: 0.5em;
+    margin-bottom: 1.3em;
 }
 
 input[type=radio] {
     display: none;
-    margin: 10px;
 }
 
 input[type=radio]+label {
-    /* 컨테이너 가로 배치 */
     display: inline-flex;
     margin: 0.4vw;
     padding: 0.5vh 5vw;
-    background-color: white;
-    border: 0.1em solid rgb(212, 214, 218);
-    border-radius: 0.3em;
-    font-size: 13px;
+    background-color: var(--white-color);
+    border: 0.1em solid var(--gray-color);
+    border-radius: 0.5em;
+    font-size: var(--normal-font-size);
     width: 16vw;
-    height: 5vh;
+    height: 3vh;
     align-items: center;
     justify-content: center;
-}
+} */
 
 /* 지원동기 */
 .motive {
     position: absolute;
-    top: 64vh;
+    top: 33vh;
 }
 
 textarea {
-    border: 0.2em solid rgb(212, 214, 218);
+    border: var(--light-border) solid var(--gray-color);
     border-radius: 0.5em;
     padding: 3vw;
     position: absolute;
@@ -128,31 +135,54 @@ textarea {
     height: 17vh;
     margin-top: 1vh;
     /* margin-bottom: -1vh; */
+    resize: none;
+}
+
+/* 포트폴리오 */
+.portfolio {
+    position: absolute;
+    top: 59vh;
+}
+
+input[type=url] {
+    margin-top: 0.5em;
+    /* margin-bottom: 1.3em; */
+    /* margin-left: 1em; */
+    padding-left: 1em;
+    width: 80vw;
+    height: 4vh;
+    border: var(--light-border) solid var(--gray-color);
+    border-radius: 0.3em;
 }
 
 /* 이벤트 */
 input:focus,
-textarea:focus {
-    outline-color: #00D2BD;
+textarea:focus,
+select:focus {
+    outline-color: var(--main-color);
 }
-input[type=radio]:checked + .support-areas{
-    border-color:  #00D2BD;
+input[type="radio"] {
+    display: none;
+}
+input[type=radio]:checked + .support-areas {
+    border: var(--light-border) solid var(--main-color);
+
 }
 
 /* 버튼 */
 .btns {
     position: absolute;
-    top: 93vh;
+    top: 80vh;
 }
 
 .container .btns #apply-btn {
     position: relative;
     width: 86vw;
     height: 5vh;
-    margin-bottom: 6vh;
+    margin-bottom: 15vh;
     text-align: center;
-    background-color: #00D2BD;
+    background-color: var(--main-color);
     border: none;
     border-radius: 0.5em;
-    color: white;
+    color: var(--white-color);
 }

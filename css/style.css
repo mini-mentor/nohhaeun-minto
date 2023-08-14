@@ -5,59 +5,21 @@
     font-style: normal;
 }
 
+:root {
+    --main-color: #00D2BD;
+    --gray-color: rgb(212, 214, 218);
+    --white-color: #fff;
+    --main-font: 'Pretendard-Regular';
+    --normal-font-size: 0.8em;
+    --light-border: 0.1em;
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: var(--main-font);
 }
-    
-.container {
-    position: absolute;
-    left: 6vw;
-    top: 10vw;
-    width: 88vw;
-    height: 88vh;
-}
-    
-.container .main-image-container {
-    position: absolute;
-    width: 88vw;
-    height: 44vh;
-    background-color: rgba(0, 210, 189);
-    border-radius: 1.5em;
-}
-    
-.main-image-container img {
-    position: absolute;
-    width: 91vw;
-    height: 35vh;
-    left: -3vw;
-    top: 10vh;
-}
-    
-.container #title {
-    position: absolute;
-    margin: 2vw;
-    top: 48vh;
-    font-size: 1.5em;
-    font-weight: 900;
-    font-family: 'Pretendard-Regular';
-}
-    
-.container #sub-title {
-    position: absolute;
-    margin: 2vw;
-    top: 57vh;
-    font-size: 1.1em;
-    font-family: 'Pretendard-Regular';
-}
-    
-.container .kakao-login-btn {
-    position: absolute;
-    top: 82vh;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    border-radius: 0.3em;
-    border: none;
-    background-color: rgb(254, 229, 0);
+
+::-webkit-scrollbar {
+    display: none;
 }

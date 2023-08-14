@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>멘티로 지원하기</title>
     <link rel="stylesheet" href="css/apply_mentee.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <form action="#" method="post">
+    <header>
         <div class="container">
             <p id="title">
                 미니멘토의<br>
@@ -19,43 +21,85 @@
             <p id="sub-title">
                 백엔드, 프론트엔드, 모바일 공부에 관심과 열정이 있는 분들을 모집합니다.
             </p>
-            <hr>
+            <!-- <hr> -->
+        </div>
+    </header>
+    <main>
+        <div class="container">
             <div class="apply">
                 <div class="per-info">
-                    <p class="head">개인정보</p>
                     <div class="content">
-                        <table>
-                            <tr>
-                                <th class="sub-head" id="name">이름</th>
-                                <th><input type="text" name="name" placeholder="이름을 공백없이 입력하세요."></th>
-                            </tr>
-                            <tr>
-                                <th class="sub-head">연락처</th>
-                                <th><input type="tel" name="tel" placeholder="010-0000-0000"></th>
-                            </tr>
-                        </table>
+
+                        <p class="head">이름</p>
+                        <input type="text" name="name" placeholder="이름을 공백없이 입력하세요.">
+
+                        <p class="head">학년</p>
+
+                        <select name="grade" id="grade">
+                            <option value="학년을 선택해주세요." disabled selected>학년을 선택해주세요.</option>
+                            <option value="1학년">1학년</option>
+                            <option value="2학년">2학년</option>
+                            <option value="3학년">3학년</option>
+                        </select>
+
+                        <p class="head">학교</p>
+                        <input type="tel" name="text" placeholder="재학중인 학교명을 입력하세요.">
                     </div>
                 </div>
-                <div class="support-areas">
+                <!-- <div class="support-areas">
                     <p class="head">지원 분야</p>
                     <div class="content">
-                        <input type="radio" name="support-areas" value="백엔드"> <label for="radios">백엔드</label>
-                        <input type="radio" name="support-areas" value="프론트엔드"> <label for="radios">프론트엔드</label>
-                        <input type="radio" name="support-areas" value="모바일"> <label for="radios">모바일</label>
+                        <input type="radio" class="support-areas" name="support-areas" value="백엔드"> <label for="radios">백엔드</label>
+                        <input type="radio" class="support-areas" name="support-areas" value="프론트엔드"> <label for="radios">프론트엔드</label>
+                        <input type="radio" class="support-areas" name="support-areas" value="모바일"> <label for="radios">모바일</label>
+                    </div>
+                </div> -->
+                <div class="motive">
+                    <p class="head">지원 동기</p>
+                    <div class="motive-text">
+                        <textarea name="textfield" id="motive" placeholder="지원 동기를 작성해주세요." ></textarea>
                     </div>
                 </div>
-                <div class="motive">
-                    <p class="head">지원동기</p>
-                    <div class="motive-text">
-                        <textarea name="textfield" id="motive"></textarea>
-                    </div>
+                <div class="portfolio">
+                    <p class="head">포트폴리오 링크 (최대 3개)</p>
+                        <input type="url" placeholder="포트폴리오 링크를 첨부해주세요.">
+                        <input type="url" placeholder="포트폴리오 링크를 첨부해주세요.">
+                        <input type="url" placeholder="포트폴리오 링크를 첨부해주세요.">
                 </div>
             </div>
             <div class="btns">
                 <button id="apply-btn">지원하기</button>
             </div>
         </div>
-    </form>
+    </main>
+    <footer>
+        <!-- <p>footer입니다만</p> -->
+        <button>
+            <div class="home-btn">
+                <img src="img/selected-home-btn.png" alt="홈버튼"><br>
+                <p>홈</p>
+            </div>
+        </button>
+        <button>
+            <div class="calendar-btn">
+                <img src="img/calendar-btn.png" alt="일정버튼"><br>
+                <p>일정</p>
+            </div>
+        </button>
+        <button>
+            <div class="history-btn">
+
+                <img src="img/history-btn.png" alt="히스토리버튼"><br>
+                <p>히스토리</p>
+            </div>
+            </button>
+        <button>
+            <div class="mypage-btn">
+                <img src="img/mypage-btn.png" alt="마이페이지버튼"><br>
+                <p>마이페이지</p>
+            </div>
+        </button>
+    </footer>
 </body>
 
 </html>
