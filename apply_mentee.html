@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멘티로 지원하기</title>
+    <link rel="stylesheet" href="css/apply_mentee.css">
+</head>
+
+<body>
+    <form action="#" method="post">
+        <div class="container">
+            <p id="title">
+                미니멘토의<br>
+                멘티로 지원하기!
+            </p>
+            <p id="sub-title">
+                백엔드, 프론트엔드, 모바일 공부에 관심과 열정이 있는 분들을 모집합니다.
+            </p>
+            <hr>
+            <div class="apply">
+                <div class="per-info">
+                    <p class="head">개인정보</p>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <th class="sub-head" id="name">이름</th>
+                                <th><input type="text" name="name" placeholder="이름을 공백없이 입력하세요."></th>
+                            </tr>
+                            <tr>
+                                <th class="sub-head">연락처</th>
+                                <th><input type="tel" name="tel" placeholder="010-0000-0000"></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="support-areas">
+                    <p class="head">지원 분야</p>
+                    <div class="content">
+                        <input type="radio" name="support-areas" value="백엔드"> <label for="radios">백엔드</label>
+                        <input type="radio" name="support-areas" value="프론트엔드"> <label for="radios">프론트엔드</label>
+                        <input type="radio" name="support-areas" value="모바일"> <label for="radios">모바일</label>
+                    </div>
+                </div>
+                <div class="motive">
+                    <p class="head">지원동기</p>
+                    <div class="motive-text">
+                        <textarea name="textfield" id="motive"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <button id="apply-btn">지원하기</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
