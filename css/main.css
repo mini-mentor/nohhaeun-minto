@@ -269,6 +269,23 @@ footer button .calendar-btn p {
     font-size: 0.5em;
 }
 
+ion-icon {
+    position: absolute;
+    top: 1vh;
+    width: 7vw;
+    height: 3.5vh;
+}
+
+ion-icon p {
+    position: absolute;
+    top: 5vh;
+    left: 0.4vw;
+    width: 6vw;
+    /* height: 3.5vh; */
+    color: rgb(194, 194, 194);
+    font-size: 0.5em;
+}
+
 /* 히스토리 버튼 */
 footer button .history-btn {
     position: absolute;

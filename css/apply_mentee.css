@@ -3,6 +3,7 @@
 @media (max-height: 844px) {}
 
 header {
+    /* z-index: 4; */
     position: absolute;
     /* left: 7vw; */
     top: -5vw;
@@ -14,10 +15,19 @@ header {
 main {
     position: absolute;
     /* left: 7vw; */
-    top: 31vw;
-    /* width: 86vw; */
-    height: 90vh;
+    top: 55vw;
+    width: 100vw;
+    height: 80vh;
+    /* background-color: aqua; */
     background-color: var(--white-color);
+}
+
+ion-icon {
+    /* background-color: var(--white-color); */
+    position: absolute;
+    top: 1vh;
+    width: 10vw;
+
 }
 
 .container {
@@ -39,7 +49,7 @@ main {
 .container #sub-title {
     position: absolute;
     top: 12vh;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 500;
     color: var(--white-color);
 }
@@ -55,7 +65,7 @@ main {
 .container .apply .per-info {
     position: absolute;
     /* position: relative; */
-    top: 5vh;
+    top: -7vh;
 }
 
 .head {
@@ -88,6 +98,7 @@ select {
     width: 84vw;
     border: none;
     border: var(--light-border) solid var(--gray-color);
+    /* padding-right: 1em; */
 }
 
 /* 지원 분야 */
@@ -123,7 +134,7 @@ input[type=radio]+label {
 /* 지원동기 */
 .motive {
     position: absolute;
-    top: 33vh;
+    top: 22vh;
 }
 
 textarea {
@@ -141,7 +152,7 @@ textarea {
 /* 포트폴리오 */
 .portfolio {
     position: absolute;
-    top: 59vh;
+    top: 49vh;
 }
 
 input[type=url] {
@@ -172,14 +183,14 @@ input[type=radio]:checked + .support-areas {
 /* 버튼 */
 .btns {
     position: absolute;
-    top: 80vh;
+    top: 70vh;
 }
 
 .container .btns #apply-btn {
     position: relative;
     width: 86vw;
     height: 5vh;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
     text-align: center;
     background-color: var(--main-color);
     border: none;
