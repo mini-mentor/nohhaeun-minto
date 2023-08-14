@@ -40,10 +40,13 @@
     top: 2vh;
 }
 
-ion-icon {
+header ion-icon {
+    /* background-color: var(--white-color); */
     position: absolute;
-    left: 77vw;
-    top: 2vh;
+    /* width: 10vw; */
+    top: 40vh;
+    left: 20vw;
+    /* color: var(--black-color); */
 }
 
 .apply .mentee {

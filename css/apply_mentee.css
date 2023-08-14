@@ -22,12 +22,13 @@ main {
     background-color: var(--white-color);
 }
 
-ion-icon {
+header ion-icon {
     /* background-color: var(--white-color); */
     position: absolute;
-    top: 1vh;
-    width: 10vw;
-
+    /* width: 10vw; */
+    top: -4vh;
+    left: -2vw;
+    color: var(--white-color);
 }
 
 .container {
